@@ -1,0 +1,27 @@
+
+
+div {
+    
+    
+    background-color: lightgrey;
+    width: 500px;
+    border: 15px ;
+    padding: 50px;
+    margin: 20px;
+  }
+  button{
+      border: hidden;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   
+  }
+  .left{
+      float: top-left;
+  }
+  a{
+    float:none;
+  }
