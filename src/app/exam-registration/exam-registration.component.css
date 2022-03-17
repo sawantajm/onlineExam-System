@@ -1,12 +1,17 @@
-
-
-
+form{
+    box-sizing: border-box;
+  
+}
 .container {
     padding: 16px;
     width: 350px;
     margin: auto;
   }
-  input,button{
+
+
+
+
+input,button{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -14,17 +19,3 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-  h4{
-      text-align: center;
-      padding:10px;
-      margin:auto;
-  }
-
-  .main{
-     
-      width:50%;
-        background-color:lightgray;
-        margin: auto;
-     
-  }
-  
