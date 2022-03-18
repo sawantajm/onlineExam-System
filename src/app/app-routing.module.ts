@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ConductExamComponent } from './conduct-exam/conduct-exam.component';
 import { ExamRegistrationComponent } from './exam-registration/exam-registration.component';
 import { ExampageComponent } from './exampage/exampage.component';
 import { HomeComponent } from './home/home.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
 {path:'about',component:AboutusComponent},
 {path:'Resetpassword',component:ResetpasswordComponent},
 {path:'exam',component:ExampageComponent},
-{path:'startexam',component:StartexamComponent}];
+{path:'startexam',component:StartexamComponent},
+{path:'conductExam',component:ConductExamComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

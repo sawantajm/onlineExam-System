@@ -16,6 +16,22 @@ import { Registerservice } from './Services/Registration.service';
 
 import { ExamRegistrationComponent } from './exam-registration/exam-registration.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ConductExamComponent } from './conduct-exam/conduct-exam.component';
+import { ConductExamService } from './Services/conductExam.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import{MatFormFieldModule} from '@angular/material/form-field'; 
+
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatIconModule } from '@angular/material/icon';
+
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,18 +43,24 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ExampageComponent,
     StartexamComponent,
    
-    ExamRegistrationComponent
+    ExamRegistrationComponent,
+        ConductExamComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatIconModule
    
     
   ],
-  providers: [Registerservice],
+  providers: [Registerservice,ConductExamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

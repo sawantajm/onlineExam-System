@@ -1,0 +1,99 @@
+<p>conduct-exam works!</p>
+
+
+  <h4>Exam</h4>
+
+  <!--
+  <p id="lbtimeleft"></p>
+   <script>
+       
+  function startCoundown(timeLeft)
+  {
+       var interval =setInterval(countdown,10000);
+       Update();
+
+       function countdown(){
+           if(--timeLeft>0)
+           {
+               Update();
+
+           }
+           else{
+               clearInterval(interval);
+               Update();
+               completed();
+           }
+       }
+
+       function Update()
+       {
+           const hours=Math.floor(timeLeft/3600);
+           const minutes=Math.floor((timeLeft %3600)/60);
+           const second=timeLeft%60;
+
+
+           document.getElementById('lbtimeleft').innerHTML=''+hours +':'+minuts +':'+second;
+       }
+
+       function completed()
+       {
+           document.write("successfully completed");
+       }
+  }
+   </script>
+    
+   
+    <div *ngFor="let question of quetioninfo; let i=index; ">
+            {{ question.questionNo}}
+            {{ question.question}}<br/>
+            <input type="radio" [value]="true" [(ngModel)]="question.isSelected"  >
+                <span>{{question.option1}}</span>
+            <input type="radio" [value]="false" [(ngModel)]="question.isSelected"   >
+                <span>{{question.option2}}</span><br>
+            <input type="radio" [value]="true" [(ngModel)]="question.isSelected"  >
+                <span>{{question.option3}}</span>
+            <input type="radio" [value]="true" [(ngModel)]="question.isSelected" >
+                <span>{{question.option4}}</span>
+      
+    </div>
+
+
+    <form #f="ngForm" (ngSubmit)="submit()"></form>
+-->
+
+
+<div *ngFor="let question of questioninfo; let i=index; ">
+    
+    {{ question.questionNo}}
+    {{ question.question}}<br/>
+
+
+    <mat-radio-button class="example-radio-button" [value]="question.option1"></mat-radio-button >
+    {{ question.option1 }}
+
+    <mat-radio-button class="example-radio-button" [value]="question.option1"></mat-radio-button>
+    {{ question.option2 }}
+    <mat-radio-button class="example-radio-button" [value]="question.option1"></mat-radio-button>
+    {{ question.option3 }}
+    <mat-radio-button class="example-radio-button" [value]="question.option1"></mat-radio-button>
+    {{ question.option4 }}
+    
+</div>
+<!--
+
+    
+     
+   <div [hidden]="question.isHidden"></div>
+<button  (click)="questioninfo[i].isHidden = true;questioninfo[i + 1] ?questioninfo[i + 1].isHidden = false : false">Next</button>
+-->
+
+
+
+  <div>
+        <button class="btn btn-primary">Next</button>&nbsp;&nbsp;
+        <button class="btn btn-primary">Finish</button>
+   </div>
+ 
+
+
+

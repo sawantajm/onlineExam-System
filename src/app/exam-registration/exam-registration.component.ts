@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, ValidatorFn } from '@angular/forms';
 import { Registration } from '../Model/Registration.model';
 import { Registerservice } from '../Services/Registration.service';
-import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms';
+import { FormBuilder,FormControl,FormGroup,AbstractControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-exam-registration',
   templateUrl: './exam-registration.component.html',
@@ -36,8 +36,61 @@ export class ExamRegistrationComponent implements OnInit {
     'state':new FormControl('',[Validators.required]),
     'qualification':new FormControl('',[Validators.required]),
     'yearOfComplition':new FormControl('',[Validators.required]),
-    'mobileNo':new FormControl('',[Validators.required,Validators.maxLength(11)])
-    });
+    'mobileNo':new FormControl('',[Validators.required,Validators.maxLength(11)]),
+    },
+    ExamRegistrationComponent.mustMatch('password', 'confirmpassword')
+    );
+  static onlyChar(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: boolean } | null => {
+      if (control.value == '') return null;
+
+      let re = new RegExp('^[a-zA-Z ]*$');
+      if (re.test(control.value)) {
+        return null;
+      } else {
+        return { onlyChar: true };
+      }
+    };
+  }
+  static mustMatch(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+
+      if (matchingControl.errors && !matchingControl.errors['mustMatch']) {
+        return;
+      }
+
+      // set error on matchingControl if validation fails
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ mustMatch: true });
+      } else {
+        matchingControl.setErrors(null);
+      }
+      return null;
+    };
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     get fullname()
     {
       return this.registrationform.get('fullname');

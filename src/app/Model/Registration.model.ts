@@ -7,6 +7,7 @@ export class Registration
     dob?:Date;
     state?:string;
     qualification?:string;
+    
     yearOfCompletion?:Date;
     mobileNo ?:string;
 
