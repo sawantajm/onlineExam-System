@@ -56,17 +56,7 @@ conductexam:QuestionDetails={};
     this.conductexam=this.questioninfo;
   }
 
-  selectAll(){
-    this.questioninfo.forEach((i:any)=>{
-      i.isSelected=true;
-    })
-  }
-
-  unSelectAll(){
-    this. questioninfo.forEach((i:any)=>{
-      i.isSelected=false;
-    })
-  }
+  
 
 
 

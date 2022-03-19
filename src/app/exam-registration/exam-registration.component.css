@@ -3,11 +3,18 @@ form{
   
 }
 .container {
-    padding: 16px;
-    width: 350px;
-    margin: auto;
-  }
-
+  padding: 16px;
+  width: 350px;
+  margin: auto;
+  border: groove;
+  width: 700px;
+  height:1100px;
+  margin: auto;
+  padding: 2em
+}
+h2{
+  text-align: center;
+}
 
 
 

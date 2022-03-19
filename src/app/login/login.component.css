@@ -1,12 +1,17 @@
 
 form{
     box-sizing: border-box;
-    background-color: lightgray;
+    
 }
 .container {
     padding: 16px;
     width: 350px;
     margin: auto;
+    border: groove;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    padding: 2em
   }
   input,button{
     width: 100%;

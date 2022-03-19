@@ -5,8 +5,9 @@
 <form [formGroup]="registrationform">
 
 
-    
+   
     <div class="container">
+        <h2>User Registration</h2>
           <label>Full Name:</label>
           <input   type="text"class="form-control" formControlName="fullname" ><br/><br/>
           <div *ngIf="fullname && fullname.invalid && fullname.touched"  class="text-danger">username is required</div>
