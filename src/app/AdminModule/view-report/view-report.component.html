@@ -1,0 +1,20 @@
+<p>view-report works!</p>
+
+<table class="table table-hover">
+
+    <thead>Name:</thead>
+    <thead>Email:</thead>
+    <thead>Mobile No:</thead>
+    <thead>City:</thead>
+    <thead>State:</thead>
+    <tbody><div *ngFor="let rec of stud">
+        <tr><td>{{rec.name}}</td></tr>
+        <tr><td>{{rec.email}}</td></tr>
+        <tr><td>{{rec.mobileNo}}</td></tr>
+        <tr><td>{{rec.city}}</td></tr>
+        <tr><td>{{rec.state}}</td></tr>
+
+    
+    </div>
+    </tbody>
+</table>

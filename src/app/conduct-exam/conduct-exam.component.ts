@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { ConductExamService } from '../Services/conductExam.service';
 import { QuestionDetails } from '../Model/conductexam.model';
-import { opcheck } from '../Model/examradio';
+
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-conduct-exam',
@@ -17,18 +18,27 @@ export class ConductExamComponent implements OnInit {
 
 
 
-  constructor(private examservice:ConductExamService) {
+  constructor(private fb:FormBuilder,private examservice:ConductExamService) {
    
    }
 
 
 
+  public currentQuetion:number=0;
+
+public currentLevel="";
+
+   examconduct=this.fb.group({
+  "student_response":new FormControl(['',Validators.required])
   
+   });
+
+option()
+{
+  return this.examconduct.get('student_response');
+}
 
 
-
-
-conductexam:QuestionDetails={};
 
 
 
@@ -46,18 +56,33 @@ conductexam:QuestionDetails={};
 
 
 
-  questioninfo:any;
+  public questionlist:any=[];
   DisplayQuetion()
   {
-   console.log("Exam");
+   
   
 
-   this.examservice.getQuetion().subscribe((data)=>{this.questioninfo=data;console.log(this.questioninfo)});
-    this.conductexam=this.questioninfo;
+   this.examservice.getQuetion().subscribe((data)=>{this.questionlist=data;console.log(this.questionlist)});
+    
   }
 
+  message:any;
+nextQuestion()
+{
   
+  
+    this.currentQuetion++;
+    this.message="Successfully Completed"
+ 
+  
+  
+}
 
-
+result:any;
+Answeres(curreQue:any,option:any)
+  {
+    debugger;
+    this.examservice.sendanswere(this.examconduct.value).subscribe((data)=>{this.result=data;console.log(this.result)})
+  }
 
 }

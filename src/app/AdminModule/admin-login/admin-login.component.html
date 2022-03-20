@@ -1,10 +1,7 @@
+<p>adminlogin works!</p>
 <form [formGroup] ="loginform">
     <div class="container">
-        
-        <h3>USER LOGIN</h3>
-        
-        <br>
-        <br>
+    
         <label>Email Id:</label>&nbsp;&nbsp;
         <input type="text" placeholder="User Name" formControlName="Email"/><br>
         <div *ngIf="Email && Email.invalid && Email.touched" class="text-danger">Email is required</div>
@@ -13,16 +10,8 @@
         <input type="Password"  placeholder="Password"   formControlName="password"><br>
         <div *ngIf="password && password.invalid && password.touched" class="text-danger">Password is required</div>
         
-        
+        <button (click)="dologin()" [disabled]="!loginform.valid"  class="btn btn-primary">LOGIN</button> &nbsp;&nbsp; 
         <p><a routerLink="/Resetpassword">Forgot password?</a></p>
-
-
-      <button (click)="dologin()" [disabled]="!loginform.valid" class="btn btn-primary" >LOGIN</button> &nbsp;&nbsp; 
-      <p>Don't have an account<a routerLink="/Regisration">Register here</a></p>&nbsp;
-       
-        
-      
          
-
     </div>
 </form>

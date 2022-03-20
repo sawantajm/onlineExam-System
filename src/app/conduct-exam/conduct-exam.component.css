@@ -1,1 +1,7 @@
+.checked{
+    visibility:hidden;
+}
 
+form{
+    text-align: center;
+}

@@ -44,3 +44,49 @@ select * from ExamDetails
 select * from level
 select * from QuestionDetails
 select * from Filename
+
+insert into level(Level_id,Level_Name)values(1,'Level_1'),(2,'Level_2'),(3,'Level_3')
+
+insert into Subject(Subject_id,Subject_name)values(1,'java'),(2,'c#.Net'),(3,'C++'),(4,'SQL');
+
+select * from Subject
+
+insert into QuestionDetails(Question_id,Question,Option1,Option2,Option3,Option4,Correctanswers,Subject_id,Level_id)
+values(1,'In which memory a String is stored, when we create a string using new operator?','Stack','String memory','Heap memory',
+'Random storage space','Heap memory',1,1),(2,' What is the use of the intern() method?','It returns the existing string from memory',
+'It creates a new string in the database','It modifies the existing string in the database',
+'None of the above','It returns the existing string from memory',1,1),(3,'Which of the following is a marker interface?','Runnable interface',
+'Remote interface','Readable interface','Result interface','Remote interface',1,1),(4,'Which of the following is a reserved keyword in Java?','object'
+,'strictfp','main','system','strictfp',1,1),(5,' Which keyword is used for accessing the features of a package?','package','import',
+'extends','export','export',1,1)
+
+
+
+
+
+insert into QuestionDetails(Question_id,Question,Option1,Option2,Option3,Option4,Correctanswers,Subject_id,Level_id)
+values(6,'An interface with no fields or methods is known as a ______.','Runnable Interface',
+'Marker Interface','Abstract Interface','CharSequence Interface','Marker Interface',1,2),(7,'Which of the following is an immediate subclass of the Panel class?','Applet class',
+'Window class','Frame class','Dialog class','Applet class',1,2),(8,'Which option is false about the final keyword?','A final method cannot be overridden in its subclasses.',
+'A final class cannot be extended.','A final class cannot extend other classes.','A final method can be inherited.','A final class cannot extend other classes.',1,2),
+(9,'Which of these classes are the direct subclasses of the Throwable class?','RuntimeException and Error class',
+'Exception and VirtualMachineError class','Error and Exception class','IOException and VirtualMachineError class','Error and Exception class',1,2),
+(10,'What do you mean by chained exceptions in Java?',
+'Exceptions occurred by the VirtualMachineError','An exception caused by other exceptions',
+'Exceptions occur in chains with discarding the debugging information','None of the above','An exception caused by other exceptions',1,2)
+
+
+
+
+
+DBCC TRACEON(460, -1);
+
+
+
+
+
+
+
+
+
+

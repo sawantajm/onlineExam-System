@@ -1,0 +1,61 @@
+<p>search-student works!</p>
+<form #searchstudent>
+
+<label>Technology:</label>
+<select><option>Select</option>
+    <option value="Java">Java</option>
+    <option value="c#">.NET</option>
+    <option value="sql">Sql</option>
+</select>
+
+<label>State:</label>
+<select><option>Select</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="c#">.NET</option>
+    <option value="sql">Sql</option>
+</select>
+
+<label>City:</label>
+<input type="text"  />
+
+
+<label>Level:</label>
+<select><option>Select</option>
+    <option value="level1"></option>
+    <option value="Level2">Level2</option>
+    <option value="Level3">Level3</option>
+</select>
+
+<label>Marks:</label>
+<input type="number" placeholder="Marks"/>
+<button type="submit" class="btn btn-success" (click)="  DisplayStudent()">Search Student </button>
+
+<br/>
+<br/>
+<hr/>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name:</th>
+    <th>Email:</th>
+    <th>Mobile No:</th>
+    <th>City:</th>
+    <th>State:</th>
+      </tr>
+     
+    </thead>
+       <tbody>
+        <div *ngFor="let rec of stud">
+          <tr>
+            <td>{{rec.name}}</td>
+            <td>{{rec.email}}</td>
+            <td>{{rec.mobile_No}}</td>
+            <td>{{rec.city}}</td>
+            <td>{{rec.state}}</td>
+        
+            </tr>
+        </div>
+      </tbody>
+</table>
+</form>
+

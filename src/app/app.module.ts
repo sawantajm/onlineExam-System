@@ -25,6 +25,14 @@ import{MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
+import { AdminLoginComponent } from './AdminModule/admin-login/admin-login.component';
+import { ReportComponent } from './report/report.component';
+import { AdminProfileComponent } from './AdminModule/admin-profile/admin-profile.component';
+import { QueAddRemoveComponent } from './AdminModule/que-add-remove/que-add-remove.component';
+import { ViewReportComponent } from './AdminModule/view-report/view-report.component';
+import { SearchStudentComponent } from './AdminModule/search-student/search-student.component';
+import { SearchStudentService } from './Services/searchstudent.service';
+
 
 
 
@@ -44,7 +52,13 @@ import { MatIconModule } from '@angular/material/icon';
     StartexamComponent,
    
     ExamRegistrationComponent,
-        ConductExamComponent
+        ConductExamComponent,
+        AdminLoginComponent,
+        ReportComponent,
+        AdminProfileComponent,
+        QueAddRemoveComponent,
+        ViewReportComponent,
+        SearchStudentComponent
    
   ],
   imports: [
@@ -60,7 +74,7 @@ import { MatIconModule } from '@angular/material/icon';
    
     
   ],
-  providers: [Registerservice,ConductExamService],
+  providers: [Registerservice,ConductExamService,SearchStudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

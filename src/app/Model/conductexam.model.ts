@@ -6,4 +6,5 @@ export class QuestionDetails
     option2?:string;
     option3?:string;
     option4?:string;
+    level?:string;
 }
