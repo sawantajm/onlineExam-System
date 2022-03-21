@@ -14,10 +14,12 @@ import { LoginComponent } from './login/login.component';
 import { ReportComponent } from './report/report.component';
 
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { StartSqlExamComponent } from './start-sql-exam/start-sql-exam.component';
+import { StartcsharpexamComponent } from './startcsharpexam/startcsharpexam.component';
 import { StartexamComponent } from './startexam/startexam.component';
 
 const routes: Routes = [
-{path:'home',component:HomeComponent},
+{path:'userhome',component:HomeComponent},
 {path:'Regisration',component:ExamRegistrationComponent},
 {path:'login',component:LoginComponent},
 {path:'about',component:AboutusComponent},
@@ -29,7 +31,9 @@ const routes: Routes = [
 {path:"admin",component:AdminLoginComponent},
 {path:"adminprofile",component:AdminProfileComponent},
 {path:'searchstudent',component:SearchStudentComponent},
-{path:"addremove",component:QueAddRemoveComponent}
+{path:"addremove",component:QueAddRemoveComponent},
+{path:'sqltest',component:StartSqlExamComponent},
+{path:"csharp",component:StartcsharpexamComponent}
 ];
 
 

@@ -17,6 +17,10 @@ export class ConductExamService{
 
 
    readonly url="http://localhost:51137/Java";
+
+   readonly csharpurl="http://localhost:51137/api/Csharpexam/charp1";
+   readonly charpput="http://localhost:51137/api/Csharpexam";
+
     
     getQuetion()
     {
@@ -30,6 +34,24 @@ export class ConductExamService{
     {
         debugger;
         return this.http.put(this.url,res,{responseType: 'text'});
+    
+    
+    
+    
+    }
+
+    getcsharpQuetion()
+    {
+
+       
+       return this.http.get(this.csharpurl);
+    }
+
+
+    sendcsharpanswere(response:any)
+    {
+        debugger;
+        return this.http.put(this.charpput,response,{responseType: 'text'});
     
     
     

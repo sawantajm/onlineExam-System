@@ -12,7 +12,7 @@ export class AdminLoginComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(" login page call");
+    console.log(" Admin login page call");
   }
 
   loginform = this.fb.group(

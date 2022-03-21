@@ -32,6 +32,8 @@ import { QueAddRemoveComponent } from './AdminModule/que-add-remove/que-add-remo
 import { ViewReportComponent } from './AdminModule/view-report/view-report.component';
 import { SearchStudentComponent } from './AdminModule/search-student/search-student.component';
 import { SearchStudentService } from './Services/searchstudent.service';
+import { StartSqlExamComponent } from './start-sql-exam/start-sql-exam.component';
+import { StartcsharpexamComponent } from './startcsharpexam/startcsharpexam.component';
 
 
 
@@ -58,7 +60,9 @@ import { SearchStudentService } from './Services/searchstudent.service';
         AdminProfileComponent,
         QueAddRemoveComponent,
         ViewReportComponent,
-        SearchStudentComponent
+        SearchStudentComponent,
+        StartSqlExamComponent,
+        StartcsharpexamComponent
    
   ],
   imports: [

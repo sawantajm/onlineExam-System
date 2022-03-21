@@ -32,7 +32,7 @@
         
          <label>Confirm password:</label>
          <input  type="text"class="form-control" formControlName="confirmpassword" >
-         <div *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched" class="text-danger">confirmpassword is required</div>
+         <div *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched" class="text-danger">Password and confirmpassword not match</div>
        
   
      <div class="form-group">
@@ -65,8 +65,8 @@
        </div>
         <div class="form-group">
             <label>Year of Complition:</label>
-            <input  type="date"class="form-control" formControlName="yearOfComplition" >
-            <div *ngIf="yearOfComplition && yearOfComplition.invalid && yearOfComplition.touched" class="text-danger">Year Of Complition is required</div>
+            <input  type="date"class="form-control" formControlName="yearOfCompletion" >
+            <div *ngIf="yearOfCompletion && yearOfCompletion.invalid && yearOfCompletion.touched" class="text-danger">Year Of Complition is required</div>
         </div>
          <div class="form-group">
            <label>Contact No:</label>

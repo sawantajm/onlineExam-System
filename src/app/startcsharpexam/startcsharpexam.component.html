@@ -1,55 +1,4 @@
- <p>conduct-exam works!</p>
-
-
-  <h4>Exam</h4>
-
-  
-  <p id="lbtimeleft"></p>
-   <script>
-       
-  function startCoundown(timeLeft)
-  {
-       var interval =setInterval(countdown,10000);
-       Update();
-
-       function countdown(){
-           if(--timeLeft>0)
-           {
-               Update();
-
-           }
-           else{
-               clearInterval(interval);
-               Update();
-               completed();
-           }
-       }
-
-       function Update()
-       {
-           const hours=Math.floor(timeLeft/3600);
-           const minutes=Math.floor((timeLeft %3600)/60);
-           const second=timeLeft%60;
-
-
-           document.getElementById('btntime').innerHTML=''+hours +':'+minuts +':'+second;
-       }
-
-       function completed()
-       {
-           document.write("successfully completed");
-       }
-  }
-   </script>
-
-  <button id="btntime">Time</button>
-
-
-
-
-
-
-
+<p>startcsharpexam works!</p>
 
 <form [formGroup]="examconduct" >
     <h2>{{questionlist[currentQuetion]?.level}}</h2>
@@ -76,5 +25,3 @@
 <button class="btn btn-primary"[disabled]="questionlist[currentQuetion]?.questionNo===null"  (click)="nextQuestion()" (click)="Answeres()" >Next</button>&nbsp;&nbsp;
 <button class="btn btn-info" routerLink="/Report">Finish</button>
 </form>
-
-

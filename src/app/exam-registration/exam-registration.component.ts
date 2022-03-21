@@ -35,24 +35,24 @@ export class ExamRegistrationComponent implements OnInit {
     'dob':new FormControl('',[Validators.required]),
     'state':new FormControl('',[Validators.required]),
     'qualification':new FormControl('',[Validators.required]),
-    'yearOfComplition':new FormControl('',[Validators.required]),
+    'yearOfCompletion':new FormControl('',[Validators.required]),
     'mobileNo':new FormControl('',[Validators.required,Validators.maxLength(11)]),
     },
-    ExamRegistrationComponent.mustMatch('password', 'confirmpassword')
-    );
-  static onlyChar(): ValidatorFn {
-    return (control: AbstractControl): { [key: string]: boolean } | null => {
-      if (control.value == '') return null;
-
-      let re = new RegExp('^[a-zA-Z ]*$');
-      if (re.test(control.value)) {
-        return null;
-      } else {
-        return { onlyChar: true };
-      }
-    };
+    {
+    validators:this.mustMatch('password', 'confirmpassword')
   }
-  static mustMatch(controlName: string, matchingControlName: string) {
+    );
+
+
+
+
+
+
+
+
+  
+
+  mustMatch(controlName: string, matchingControlName: string) {
     return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
@@ -124,9 +124,9 @@ export class ExamRegistrationComponent implements OnInit {
     {
       return this.registrationform.get('qualification');
     }
-    get yearOfComplition()
+    get yearOfCompletion()
     {
-      return this.registrationform.get('yearOfComplition');
+      return this.registrationform.get('yearOfCompletion');
     }
     get mobileNo()
     {

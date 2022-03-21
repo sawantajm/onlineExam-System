@@ -28,12 +28,13 @@ export class ConductExamComponent implements OnInit {
 
 public currentLevel="";
 
-   examconduct=this.fb.group({
+   examconduct=this.fb.group(
+     {
   "student_response":new FormControl(['',Validators.required])
   
    });
 
-option()
+   student_response()
 {
   return this.examconduct.get('student_response');
 }
@@ -79,7 +80,7 @@ nextQuestion()
 }
 
 result:any;
-Answeres(curreQue:any,option:any)
+Answeres()
   {
     debugger;
     this.examservice.sendanswere(this.examconduct.value).subscribe((data)=>{this.result=data;console.log(this.result)})

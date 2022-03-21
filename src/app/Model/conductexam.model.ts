@@ -7,4 +7,6 @@ export class QuestionDetails
     option3?:string;
     option4?:string;
     level?:string;
+    Student_response?:string;
+
 }
