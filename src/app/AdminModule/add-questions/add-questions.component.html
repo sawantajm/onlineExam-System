@@ -1,0 +1,100 @@
+<p>add-questions works!</p>
+
+
+
+
+<form [formGroup]="AddQuestion">
+
+
+   <div class="container">
+            <h2></h2>
+
+
+      <!--
+            <label> Select Level:</label>
+            <select formControlName="level">
+              <option>select level:</option>
+            <option value="level" >Level1:</option>
+            <option value="level">Level2:</option>
+            <option value="level">Level3:</option>
+            </select>
+          <div *ngIf="level && level.invalid && level.touched"  class="text-danger">level is Required</div>
+        
+            
+            <label>Select Subject</label>
+          <select formControlName="subject">
+            
+            <option>Subject Name:</option>
+            <option value="subject">Java:</option>
+            <option value="subject">C#:</option>
+           </select>
+            <div *ngIf="subject && subject.invalid && subject.touched" class="text-danger">subject is Required</div>
+        -->
+          <!--
+            <label>Level:</label>
+            <select formControlName="level" (change)="onChangeState($event)">
+              <option value="">Select level</option>
+              <option *ngFor="let l of levelinfo" [value]="l.levelId">{{l.level}}</option>
+            </select>
+            <label>Subject</label>
+            <select  formControlName="subject">
+                <option value="">Select subject</option>
+                <option *ngFor="let sub of subjectinfo" [value]="sub.subjectId">{{sub.subjectName}}</option>
+              </select>
+
+-->
+ 
+      
+          <div class="form-group">
+                <label>Level:</label>
+                <input type="number"class="form-control" formControlName="level" >
+                <div *ngIf="level && level.invalid && level.touched"  class="text-danger">level is Required</div>
+                <label>Subject:</label>
+                <input type="number"class="form-control" formControlName="subject" >
+                <div *ngIf="subject && subject.invalid && subject.touched" class="text-danger">subject is Required</div>
+          </div>
+     
+          <label>Question:</label>
+         <input type="text"class="form-control" formControlName="question" >
+         <div *ngIf="question && question.invalid && question.touched" class="text-danger" >Question is required</div>
+       
+
+    
+        
+          <label>Option 1:</label>
+         <input type="text"class="form-control" formControlName="option1" >
+         <div *ngIf="option1 && option1.invalid && option1.touched" class="text-danger" >Option1 is Required</div>
+       
+        
+         <label>Option 2:</label>
+         <input  type="text"class="form-control" formControlName="option2" >
+         <div *ngIf="option2 && option2.invalid && option2.touched" class="text-danger">option2 is Required</div>
+
+            <label>Option 3:</label>
+            <input  type="text"class="form-control" formControlName="option3" >
+            
+
+         
+    
+            <label>Option 4:</label>
+            <input  type="text"class="form-control" formControlName="option4" >
+            
+      
+            
+
+
+           
+            <label>CorrectAnswer:</label>
+            <input  type="text"class="form-control" formControlName="correctanswers" >
+            <div *ngIf="correctanswers && correctanswers.invalid && correctanswers.touched" class="text-danger">Add Correct Answer  </div>
+          
+                
+    
+
+            <button class="btn btn-primary"[disabled]="!AddQuestion.valid"  (click)=" Addquestion()" >Add Question</button>
+         
+    </div>
+        
+</form>
+
+    

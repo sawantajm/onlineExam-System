@@ -15,7 +15,7 @@ export class SearchStudentService
     }
 
 
-     readonly uri = "http://localhost:51137/api/SearchStudent";
+     readonly uri = "http://localhost:21332/api/SearchStudent";
 
 
    

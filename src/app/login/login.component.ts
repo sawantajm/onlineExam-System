@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { Registerservice } from '../Services/Registration.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,7 +10,7 @@ import { FormBuilder,FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private regservice:Registerservice ) { }
 
 
   ngOnInit(): void {
@@ -26,6 +28,13 @@ export class LoginComponent implements OnInit {
   dologin()
   {
     console.log(this.loginform.value);
+
+    
+      window.alert("Login Successfully");
+    
+
+   
+    
   }
   get Email()
   {

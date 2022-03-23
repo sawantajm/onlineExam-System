@@ -12,14 +12,15 @@ export class ConductExamService{
 
     }
 
+        //level get url
+     readonly uri = "http://localhost:21332/api/ConductExam/Level1";
 
-     readonly uri = "http://localhost:51137/Java/Level1";
+            //student response put url
+   readonly url="http://localhost:21332/api/ConductExam";
 
 
-   readonly url="http://localhost:51137/Java";
-
-   readonly csharpurl="http://localhost:51137/api/Csharpexam/charp1";
-   readonly charpput="http://localhost:51137/api/Csharpexam";
+   readonly csharpurl="http://localhost:21332/api/CSharpExam/charp1";
+   readonly charpput="http://localhost:21332/api/CSharpExam";
 
     
     getQuetion()

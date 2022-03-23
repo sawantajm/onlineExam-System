@@ -73,7 +73,10 @@ nextQuestion()
   
   
     this.currentQuetion++;
-    this.message="Successfully Completed"
+    if(this.currentQuetion == null )
+    {
+         window.alert("Test Completed");
+    }
  
   
   
@@ -85,5 +88,46 @@ Answeres()
     debugger;
     this.examservice.sendanswere(this.examconduct.value).subscribe((data)=>{this.result=data;console.log(this.result)})
   }
+
+
+declare clock:any;
+ 
+  //timer     
+  startCoundown(timeLeft: number)
+  {
+       var interval =setInterval(countdown,10000);
+       Update();
+
+       function countdown(){
+           if(--timeLeft>0)
+           {
+               Update();
+
+           }
+           else{
+               clearInterval(interval);
+               Update();
+               completed();
+           }
+       }
+
+       function Update()
+       {
+           const hours=Math.floor(timeLeft/3600);
+           const minutes=Math.floor((timeLeft %3600)/60);
+           const second=timeLeft%60;
+
+
+           document.getElementById(hours +':'+minutes +':'+second);
+            
+       }
+
+       function completed()
+       {
+           document.write("successfully completed");
+       }
+  }
+
+
 
 }

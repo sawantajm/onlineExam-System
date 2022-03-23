@@ -1,7 +1,23 @@
 create database OnlineExam
 
-create table Registration(User_id int identity(1,1) primary key,Fullname varchar(50),Email varchar(50) unique ,Password varchar(50),City varchar(50),DOB date,State varchar(50),
+
+
+select * from  Registration
+
+
+create table Registration(User_id int identity(1,1) primary key,Fullname varchar(50),Email varchar(50) unique ,Password varchar(50),
+City varchar(50) ,DOB date,State varchar(50),
 Qualification varchar(50),Year_of_Completion date,Mobile_no varchar(50));
+
+
+insert into Registration(Fullname,Email,Password,City,DOB,State,Qualification,Year_of_Completion,Mobile_no)values('Ajinath','sawantajm@gmail.com',
+'Ajay@123','Aurangabad','1998-01-08','Maharashtra','BE','2020-01-12','7756953384'),('rahul','rahul@123@gmail.com',
+'Rahul@123','Aurangabad','1998-01-08','Maharashtra','BE','2020-01-12','7756953385');
+
+
+
+
+
 
 
 create table Subject(Subject_id int primary key,Subject_name varchar(50) );
@@ -28,13 +44,24 @@ create table ExamDetails(Duration time,Level_id int  references level(Level_id),
 create table QuestionDetails(Question_id int primary key,File_id int references Filename(File_id),Question nvarchar(255),Correctansweres varchar(50),
 Subject_id int references Subject(Subject_id),Level_id int references level(Level_id));
 
+
+
+
+
+
+
 create table ReportDetails(User_id int references Registration(User_id),Level_id int references level(Level_id),
 MarksObtained int, Subject_id int references Subject(Subject_id));
+
+insert into ReportDetails(User_id,Level_id,MarksObtained,Subject_id)values(1,1,80,1),(2,1,80,1);
+
+
+
 
 
 create table Admin_Login(Email varchar(50),Password varchar(50));
 
-
+drop table ForgotPassword
 
 select * from Registration
 select * from Subject
@@ -44,7 +71,11 @@ select * from ExamDetails
 select * from level
 select * from QuestionDetails
 select * from Filename
+select * from stateN
+select * from district
 
+
+create table district(districtId int primary key,districtName varchar(100),stateId int references stateN(stateId))
 insert into level(Level_id,Level_Name)values(1,'Level_1'),(2,'Level_2'),(3,'Level_3')
 
 insert into Subject(Subject_id,Subject_name)values(1,'java'),(2,'c#.Net'),(3,'C++'),(4,'SQL');
@@ -79,14 +110,14 @@ values(6,'An interface with no fields or methods is known as a ______.','Runnabl
 
 
 
-DBCC TRACEON(460, -1);
 
 
 
 
 
+select * from Report
 
 
 
 
-
+select * from QuestionDetails

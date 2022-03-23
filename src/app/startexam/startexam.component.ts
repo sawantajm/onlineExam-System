@@ -12,4 +12,9 @@ export class StartexamComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+startExam()
+{
+  window.alert("Test Started Succefully");
+}
 }

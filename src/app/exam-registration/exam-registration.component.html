@@ -34,7 +34,26 @@
          <input  type="text"class="form-control" formControlName="confirmpassword" >
          <div *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched" class="text-danger">Password and confirmpassword not match</div>
        
-  
+         <div class="form-group">
+            <label>Date of Birth:</label>
+           <input  type="date"class="form-control" formControlName="dob" >
+           <div *ngIf="dob && dob.invalid && dob.touched" class="text-danger">Date of Birth is required</div>
+     </div>
+
+               
+
+
+      
+
+
+     <div class="form-group">
+        <label>State:</label>
+        <input  type="text"class="form-control" formControlName="state" >
+        <div *ngIf=" state && state.invalid && state.touched"class="text-danger">State is required</div>
+      
+   </div>
+
+
      <div class="form-group">
          <label>City:</label>
          <input  type="text"class="form-control" formControlName="city" >
@@ -43,17 +62,8 @@
         
        
 
-     <div class="form-group">
-            <label>Date of Birth:</label>
-           <input  type="date"class="form-control" formControlName="dob" >
-           <div *ngIf="dob && dob.invalid && dob.touched" class="text-danger">Date of Birth is required</div>
-     </div>
-        <div class="form-group">
-             <label>State:</label>
-             <input  type="text"class="form-control" formControlName="state" >
-             <div *ngIf=" state && state.invalid && state.touched"class="text-danger">State is required</div>
-           
-        </div>
+     
+        
                 
                
 

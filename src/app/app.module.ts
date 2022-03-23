@@ -28,12 +28,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { AdminLoginComponent } from './AdminModule/admin-login/admin-login.component';
 import { ReportComponent } from './report/report.component';
 import { AdminProfileComponent } from './AdminModule/admin-profile/admin-profile.component';
-import { QueAddRemoveComponent } from './AdminModule/que-add-remove/que-add-remove.component';
+
 import { ViewReportComponent } from './AdminModule/view-report/view-report.component';
 import { SearchStudentComponent } from './AdminModule/search-student/search-student.component';
 import { SearchStudentService } from './Services/searchstudent.service';
 import { StartSqlExamComponent } from './start-sql-exam/start-sql-exam.component';
 import { StartcsharpexamComponent } from './startcsharpexam/startcsharpexam.component';
+import { AddQuestionsComponent } from './AdminModule/add-questions/add-questions.component';
+import { AddQuesionService } from './Services/addquestion.service';
+import { AddExamQuestionComponent } from './AdminModule/add-exam-question/add-exam-question.component';
 
 
 
@@ -58,11 +61,13 @@ import { StartcsharpexamComponent } from './startcsharpexam/startcsharpexam.comp
         AdminLoginComponent,
         ReportComponent,
         AdminProfileComponent,
-        QueAddRemoveComponent,
+        
         ViewReportComponent,
         SearchStudentComponent,
         StartSqlExamComponent,
-        StartcsharpexamComponent
+        StartcsharpexamComponent,
+        AddQuestionsComponent,
+        AddExamQuestionComponent
    
   ],
   imports: [
@@ -78,7 +83,7 @@ import { StartcsharpexamComponent } from './startcsharpexam/startcsharpexam.comp
    
     
   ],
-  providers: [Registerservice,ConductExamService,SearchStudentService],
+  providers: [Registerservice,ConductExamService,SearchStudentService,AddQuesionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

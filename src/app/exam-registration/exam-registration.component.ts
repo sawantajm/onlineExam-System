@@ -14,7 +14,7 @@ export class ExamRegistrationComponent implements OnInit {
   constructor(private  fb:FormBuilder,private register:Registerservice) { }
 
   
-
+ 
 
 
   registertable:Registration={};
@@ -22,6 +22,13 @@ export class ExamRegistrationComponent implements OnInit {
   ngOnInit(): void {
    this.getRecord()
   }
+
+
+
+  
+
+
+
 
   registrationform=this.fb.group(
     {
@@ -140,7 +147,7 @@ export class ExamRegistrationComponent implements OnInit {
 
 
 
-  recordinfo:any;
+  recordinfo:any=[];
   getRecord()
   {
   this.register.getrecords().subscribe((data)=>{this.recordinfo=data; console.table(this.recordinfo)});
@@ -159,6 +166,7 @@ doregister(rform:NgForm)
 {
   debugger;
  console.log(this.registertable.fullname);
+ window.alert("Registred  Successfully");
  
  console.log(rform.value);
 

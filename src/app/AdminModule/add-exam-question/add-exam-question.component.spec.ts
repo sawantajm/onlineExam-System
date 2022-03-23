@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QueAddRemoveComponent } from './que-add-remove.component';
+import { AddExamQuestionComponent } from './add-exam-question.component';
 
-describe('QueAddRemoveComponent', () => {
-  let component: QueAddRemoveComponent;
-  let fixture: ComponentFixture<QueAddRemoveComponent>;
+describe('AddExamQuestionComponent', () => {
+  let component: AddExamQuestionComponent;
+  let fixture: ComponentFixture<AddExamQuestionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QueAddRemoveComponent ]
+      declarations: [ AddExamQuestionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QueAddRemoveComponent);
+    fixture = TestBed.createComponent(AddExamQuestionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

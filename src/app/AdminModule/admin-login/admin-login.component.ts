@@ -26,6 +26,7 @@ export class AdminLoginComponent implements OnInit {
   dologin()
   {
     console.log(this.loginform.value);
+    window.alert("Login Successfully");
   }
   get Email()
   {

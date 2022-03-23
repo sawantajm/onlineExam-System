@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { AdminLoginComponent } from './AdminModule/admin-login/admin-login.component';
 import { AdminProfileComponent } from './AdminModule/admin-profile/admin-profile.component';
-import { QueAddRemoveComponent } from './AdminModule/que-add-remove/que-add-remove.component';
+
 import { SearchStudentComponent } from './AdminModule/search-student/search-student.component';
 import { ViewReportComponent } from './AdminModule/view-report/view-report.component';
 import { ConductExamComponent } from './conduct-exam/conduct-exam.component';
@@ -31,7 +31,7 @@ const routes: Routes = [
 {path:"admin",component:AdminLoginComponent},
 {path:"adminprofile",component:AdminProfileComponent},
 {path:'searchstudent',component:SearchStudentComponent},
-{path:"addremove",component:QueAddRemoveComponent},
+
 {path:'sqltest',component:StartSqlExamComponent},
 {path:"csharp",component:StartcsharpexamComponent}
 ];

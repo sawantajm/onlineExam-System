@@ -11,9 +11,10 @@ export class Registerservice
 
     }
 
+   
 
+    readonly url="http://localhost:21332/api/Registration";
 
-    readonly url="http://localhost:51137/api/Register";
 
 getrecords()
 {
