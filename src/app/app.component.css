@@ -83,3 +83,18 @@ li{
     text-align: left;
   }
 }
+
+
+.footer{
+
+  position: fixed;
+
+  left:0;
+
+  bottom:0;
+  width: 100%;
+  background-color: #3f3f3f;
+  color: white;
+  text-align: center;
+
+}

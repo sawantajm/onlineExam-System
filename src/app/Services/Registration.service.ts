@@ -25,7 +25,6 @@ getrecords()
 InsertRecord(reg:any)
 {
     
-    debugger;
   
     
 return this.http.post(this.url,reg,{responseType: 'text'});

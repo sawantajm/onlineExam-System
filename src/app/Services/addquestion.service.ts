@@ -16,7 +16,7 @@ export class AddQuesionService
 //for question
     readonly url="http://localhost:21332/api/AddQuestion";
 
-
+/*
 
 readonly uri="http://localhost:21332/api/Subjects";
 
@@ -35,7 +35,7 @@ readonly uri="http://localhost:21332/api/Subjects";
         return this.http.get(`${this.uri}subject/${levelId}`);
       }
 
-
+*/
 getquestion()
 {
     return this.http.get(this.url);
@@ -49,7 +49,7 @@ getquestion()
  InsertRecord(que:any)
         {
             
-            debugger;
+           
         
             
         return this.http.post("http://localhost:21332/api/AddQuestion/AddRoute",que,{responseType: 'text'});

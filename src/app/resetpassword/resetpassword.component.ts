@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-resetpassword',
   templateUrl: './resetpassword.component.html',
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ResetpasswordComponent implements OnInit {
 
   constructor() { }
-newpassword?:string;
-confirmpassword?:string;
+
   ngOnInit(): void {
   }
 
+
 }
+
+

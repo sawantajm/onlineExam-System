@@ -33,7 +33,7 @@ export class ExamRegistrationComponent implements OnInit {
   registrationform=this.fb.group(
     {
     'fullname': new FormControl('',[Validators.required]),
-    'email':new FormControl('',[Validators.required]),
+    'email':new FormControl('',[Validators.required,Validators.email]),
     'password':new FormControl('',[Validators.required]),
     
     'confirmpassword':new FormControl('',[Validators.required]),
@@ -43,7 +43,7 @@ export class ExamRegistrationComponent implements OnInit {
     'state':new FormControl('',[Validators.required]),
     'qualification':new FormControl('',[Validators.required]),
     'yearOfCompletion':new FormControl('',[Validators.required]),
-    'mobileNo':new FormControl('',[Validators.required,Validators.maxLength(11)]),
+    'mobileNo':new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
     },
     {
     validators:this.mustMatch('password', 'confirmpassword')
@@ -156,19 +156,21 @@ result:any;
 setRecord()
 {
   console.log(this.registrationform.value);
-  debugger;
+ 
 
   this.register.InsertRecord(this.registrationform.value).subscribe((data)=>{this.result=data,console.log(this. result)});
 
 }
-//for validation
-doregister(rform:NgForm)
+
+
+doregister()
 {
-  debugger;
+  
  console.log(this.registertable.fullname);
- window.alert("Registred  Successfully");
+window.alert("Registred Succesfully");
+
  
- console.log(rform.value);
+ 
 
 }
 

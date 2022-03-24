@@ -37,6 +37,11 @@ import { StartcsharpexamComponent } from './startcsharpexam/startcsharpexam.comp
 import { AddQuestionsComponent } from './AdminModule/add-questions/add-questions.component';
 import { AddQuesionService } from './Services/addquestion.service';
 import { AddExamQuestionComponent } from './AdminModule/add-exam-question/add-exam-question.component';
+import { DeleteQuestionComponent } from './AdminModule/delete-question/delete-question.component';
+import { DeleteQuestionService } from './Services/deletequestion.service';
+import { Levelexam2Component } from './levelexam2/levelexam2.component';
+import { HomepageComponent } from './homepage/homepage.component';
+
 
 
 
@@ -67,7 +72,10 @@ import { AddExamQuestionComponent } from './AdminModule/add-exam-question/add-ex
         StartSqlExamComponent,
         StartcsharpexamComponent,
         AddQuestionsComponent,
-        AddExamQuestionComponent
+        AddExamQuestionComponent,
+        DeleteQuestionComponent,
+        Levelexam2Component,
+        HomepageComponent
    
   ],
   imports: [
@@ -83,7 +91,7 @@ import { AddExamQuestionComponent } from './AdminModule/add-exam-question/add-ex
    
     
   ],
-  providers: [Registerservice,ConductExamService,SearchStudentService,AddQuesionService],
+  providers: [Registerservice,ConductExamService,SearchStudentService,AddQuesionService,DeleteQuestionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

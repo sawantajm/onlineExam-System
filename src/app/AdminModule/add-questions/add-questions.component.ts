@@ -26,20 +26,48 @@ levelinfo:any=[];
   
 qdata:QuestionDetails={};
 
-    AddQuestion=this.fb.group(
+   AddQuestion=this.fb.group(
     {
-    //'level':new FormControl('',[Validators.required]),
-    //'subject':new FormControl([null],[Validators.required]),
-    'question':new FormControl('',[Validators.required]),
+      LevelId:['',[Validators.required]],
+      SubjectId:['',[Validators.required]],
+    question:['',[Validators.required]],
     
-    'option1':new FormControl('',[Validators.required]),
+    option1:['',[Validators.required]],
     
-    'option2':new FormControl('',[Validators.required]),
-    'option3':new FormControl('',[Validators.required]),
-    'option4':new FormControl('',[Validators.required]),
-    'correctanswers':new FormControl('',[Validators.required]),
+    option2:['',[Validators.required]],
+    option3:['',[Validators.required]],
+    option4:['',[Validators.required]],
+    correctanswers:['',[Validators.required]],
     
     });
+    /*
+    this.contactForm = this.formBuilder.group({
+      firstname: ['', [Validators.required, Validators.minLength(10)]],
+      lastname: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
+      email: ['', [Validators.required, Validators.email]],
+      gender: ['', [Validators.required]],
+      isMarried: ['', [Validators.required]],
+      country: ['', [Validators.required]],
+      address: this.formBuilder.group({
+        city: ['', [Validators.required]],
+        street: ['', [Validators.required]],
+        pincode: ['', [Validators.required]],
+      })
+    });
+
+
+    */
+
+
+
+
+
+
+
+
+
+/*
+
 
    subjectinfo:any={};
     levelId?:number;
@@ -62,27 +90,27 @@ qdata:QuestionDetails={};
 
   }
 
+*/
 
 
 
 
 
-
-   get level()
+   get LevelId()
     {
-     return this.AddQuestion.get('level');
+     return this.AddQuestion.get('LevelId');
     }
 
 
     
     
-    get subject()
+    get SubjectId()
     {
 
 
       
       //const value = {...this.AddQuestion.value, subject: +this.AddQuestion.value.subject };
-      return this.AddQuestion.get('subject');
+      return this.AddQuestion.get('SubjectId');
       
     }
     get question()
@@ -102,13 +130,13 @@ qdata:QuestionDetails={};
     {
       return this.AddQuestion.get('correctanswers');
     }
-
+/*
   getlevel()
   {
     this.addq.getlevel().subscribe((data)=>{this.levelinfo=data,console.table(this.levelinfo)});
 
   }
-
+*/
 recordinfo:any=[];
 GetQuestion()
 {
@@ -118,14 +146,16 @@ this.addq.getquestion().subscribe((data)=>{this.recordinfo=data, console.table(t
 
 result:any;
 Addquestion()
-{
+{ 
+
   
   console.log(this.AddQuestion.value);
-  debugger;
+  
   
  
   this.addq.InsertRecord(this.AddQuestion.value).subscribe((data)=>{this.result=data,console.log(this. result)});
 
+    window.alert("Question Added");
 }
 
 }

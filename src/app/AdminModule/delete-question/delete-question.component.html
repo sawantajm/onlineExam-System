@@ -1,0 +1,67 @@
+
+<form action="Deleteform">
+    <h1 class="text-center">Delete Question</h1>
+      
+ 
+    
+    
+    <!--
+        <h4>Subject
+          
+            <select  class="form-control" name="source">
+               
+              
+            <option value="1">Java</option>
+            <option value="2">c#.Net</option>
+            <option value="3">SQL</option>
+
+      
+            
+            
+            </select>
+            
+        </h4>
+     -->
+     &nbsp; &nbsp;
+     
+    <p>
+    <button type="button" class="btn btn-info" (click)=" doclick() " >See Question </button>
+    </p>
+
+
+
+    <table class="table table-hover">
+        <thead class="table-borderless table-secondary">
+         <tr>
+             <th scope="col">Level</th>
+            <th scope="col">Subject</th> 
+            <th scope="col">Question</th>
+             <th scope="col">Option1</th>
+            <th scope="col">Option2</th>
+            <th scope="col">Option3</th>
+            <th scope="col">Option4</th>
+            <th scope="col">Correct Answers</th>
+        
+        
+  
+        </tr>
+        </thead>
+        <tbody>        
+        <tr *ngFor="let q of questioninfo ,let id=index">
+        <td scope="row">{{q.level}}</td>
+        
+        <td>{{q.subject}}</td>
+        <td>{{q.question}}</td>
+        <td>{{q.option1}}</td>
+        <td>{{q.option2}}</td>
+        <td>{{q.option3}}</td>
+        <td>{{q.option4}}</td>
+        <td>{{q.correctanswers}}</td>
+        
+        <td><button class="btn btn-danger" (click)="removequestion(q.questionId)" >Delete</button></td>
+        <br>
+      </tr>             
+    </tbody>
+    </table>
+    
+</form>

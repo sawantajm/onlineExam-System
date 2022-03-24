@@ -1,4 +1,4 @@
-<p>add-questions works!</p>
+
 
 
 
@@ -47,11 +47,11 @@
       
           <div class="form-group">
                 <label>Level:</label>
-                <input type="number"class="form-control" formControlName="level" >
-                <div *ngIf="level && level.invalid && level.touched"  class="text-danger">level is Required</div>
+                <input type="number"class="form-control" formControlName="LevelId" >
+                <div *ngIf="LevelId && LevelId.invalid && LevelId.touched"  class="text-danger">level is Required</div>
                 <label>Subject:</label>
-                <input type="number"class="form-control" formControlName="subject" >
-                <div *ngIf="subject && subject.invalid && subject.touched" class="text-danger">subject is Required</div>
+                <input type="number"class="form-control" formControlName="SubjectId" >
+                <div *ngIf="SubjectId && SubjectId.invalid && SubjectId.touched" class="text-danger">subject is Required</div>
           </div>
      
           <label>Question:</label>

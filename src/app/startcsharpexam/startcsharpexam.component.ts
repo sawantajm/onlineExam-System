@@ -11,37 +11,56 @@ export class StartcsharpexamComponent implements OnInit {
 
   constructor(private fb:FormBuilder,private examservice:ConductExamService) {
    
-  }
 
+
+  }
+  
+  
+
+   
+
+ 
+
+
+
+
+
+
+
+  d?:any;
+  ngOnInit(): void {
+    //const obs$=interval(1000)
+    //this.d=obs$.subscribe((data)=>{console.log(data)});
+    
+    this.DisplayQuetion()
+  }
+ 
 
 
  public currentQuetion:number=0;
 
-public currentLevel="";
 
-  examconduct=this.fb.group({
- "student_response":new FormControl(['',Validators.required])
  
-  });
 
-  student_response()
+
+//add que and ans
+quesans=[{question:"",ans:" "}];
+studentresponse:any
+Answer(qid:any,option:any)
 {
- return this.examconduct.get('student_response');
+  debugger;
+  console.log(qid,option.target.value);
+  this.quesans.push(qid,option.target.value);
+  this.examservice.sendAnsdata(this.quesans).subscribe((data:any)=>{this.studentresponse=data;console.log(this.studentresponse)});
+     
+      console.log(this.quesans);
 }
 
 
 
 
-
-
- d?:any;
- ngOnInit(): void {
-   //const obs$=interval(1000)
-   //this.d=obs$.subscribe((data)=>{console.log(data)});
-   
-   this.DisplayQuetion()
- }
-
+ 
+ 
 
   
 
@@ -61,19 +80,27 @@ public currentLevel="";
 nextQuestion()
 {
  
+  if(this.currentQuetion<4)
+
+  {
+    debugger;
+    this.currentQuetion++}
+  else{
+    this.message="Successfully Completed"
+  }
  
-   this.currentQuetion++;
-   this.message="Successfully Completed"
+   
+   
 
  
  
 }
-
+/*
 result:any;
 Answeres()
  {
    debugger;
    this.examservice. sendcsharpanswere(this.examconduct.value).subscribe((data)=>{this.result=data;console.log(this.result)})
  }
-
+*/
 }

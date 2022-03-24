@@ -22,11 +22,13 @@ export class ConductExamComponent implements OnInit {
    
    }
 
+  
+
 
 
   public currentQuetion:number=0;
 
-public currentLevel="";
+public currentLevel=" ";
 
    examconduct=this.fb.group(
      {
@@ -48,6 +50,9 @@ public currentLevel="";
   ngOnInit(): void {
     //const obs$=interval(1000)
     //this.d=obs$.subscribe((data)=>{console.log(data)});
+    
+    
+  
     
     this.DisplayQuetion()
   }
@@ -71,31 +76,37 @@ public currentLevel="";
 nextQuestion()
 {
   
-  
+  if(this.currentLevel)
+  {
+
     this.currentQuetion++;
-    if(this.currentQuetion == null )
-    {
-         window.alert("Test Completed");
-    }
- 
-  
+
+    
+  } 
   
 }
+
+
+
+
+
+
+/*
 
 result:any;
 Answeres()
   {
     debugger;
     this.examservice.sendanswere(this.examconduct.value).subscribe((data)=>{this.result=data;console.log(this.result)})
-  }
-
+  }*/
+/*
 
 declare clock:any;
  
   //timer     
-  startCoundown(timeLeft: number)
+  startCoundown(timeLeft:number)
   {
-       var interval =setInterval(countdown,10000);
+       var interval=setInterval(countdown,200000);
        Update();
 
        function countdown(){
@@ -118,7 +129,7 @@ declare clock:any;
            const second=timeLeft%60;
 
 
-           document.getElementById(hours +':'+minutes +':'+second);
+          var clock=  hours +':'+minutes +':'+second;
             
        }
 
@@ -127,7 +138,11 @@ declare clock:any;
            document.write("successfully completed");
        }
   }
+*/
 
+   
 
+  }
 
-}
+ 
+

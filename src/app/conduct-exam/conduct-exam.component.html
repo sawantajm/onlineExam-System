@@ -1,15 +1,15 @@
- <p>conduct-exam works!</p>
+ 
 
 
   <h4>Exam</h4>
 
   
-  <p id="lbtimeleft"></p>
+
    <script>
   
    </script>
 
-  <button id="btntime"></button>
+  
 
 
 
@@ -25,22 +25,19 @@
 
 
 
-<input ngbButton id="rd" type="radio" value="{{questionlist[currentQuetion]?.option1}}"formControlName="student_response"/>{{questionlist[currentQuetion]?.option1}}<br/>
+<input  type="submit" value="{{questionlist[currentQuetion]?.option1}}"formControlName="student_response" /><br/><br/>
                     
                    
-<input ngbButton  id="rd"type="radio" value="{{questionlist[currentQuetion]?.option2}}"formControlName="student_response"/>{{questionlist[currentQuetion]?.option2}}<br/>
+<input type="submit" value="{{questionlist[currentQuetion]?.option2}}"formControlName="student_response" /><br/><br/>
 
 
-<input ngbButton id="rd" type="radio" value="{{questionlist[currentQuetion]?.option3}}"formControlName="student_response"/>{{questionlist[currentQuetion]?.option3}}<br/>
+<input type="submit" value="{{questionlist[currentQuetion]?.option3}}"formControlName="student_response"/><br/><br/>
 
 
-<input ngbButton id="rd" type="radio" value="{{questionlist[currentQuetion]?.option4}}" formControlName="student_response"/>{{questionlist[currentQuetion]?.option4}}<br/>
+<input type="submit" value="{{questionlist[currentQuetion]?.option4}}" formControlName="student_response"/><br/><br/>
 
-<br/>
-<div class="checkd" name="option" > </div>
-<br/>
 
-<button class="btn btn-primary"[disabled]="questionlist[currentQuetion]?.questionNo===null"  (click)="nextQuestion()" (click)="Answeres()" >Next</button>&nbsp;&nbsp;
+<button class="btn btn-primary"[disabled]="questionlist[currentQuetion]?.questionNo===null"  (click)="nextQuestion()" >Next</button>&nbsp;&nbsp;
 <button class="btn btn-info" routerLink="/Report">Finish</button>
 </form>
 

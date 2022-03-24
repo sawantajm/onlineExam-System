@@ -1,4 +1,4 @@
-<p>search-student works!</p>
+
 <form #searchstudent>
 
 <label>Technology:</label>
@@ -42,11 +42,13 @@
     <th>City:</th>
     <th>State:</th>
       </tr>
-     
     </thead>
+    </table>  
+    
        <tbody>
         <div *ngFor="let rec of stud">
           <tr>
+            
             <td>{{rec.name}}</td>
             <td>{{rec.email}}</td>
             <td>{{rec.mobile_No}}</td>
@@ -56,6 +58,6 @@
             </tr>
         </div>
       </tbody>
-</table>
+
 </form>
 
