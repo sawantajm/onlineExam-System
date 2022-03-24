@@ -108,16 +108,8 @@ values(6,'An interface with no fields or methods is known as a ______.','Runnabl
 
 
 
-
-
-
-
-
-
-
-select * from Report
-
-
-
-
 select * from QuestionDetails
+
+
+create table StudentAnswer(Userid int references Registration(User_id),subjectid int  references Subject(Subject_Id),levelid int references Level(Level_id),
+studentResponse )
