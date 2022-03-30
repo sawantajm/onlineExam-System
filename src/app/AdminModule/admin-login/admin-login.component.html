@@ -10,8 +10,9 @@
         <input type="Password"  placeholder="Password"   formControlName="password"><br>
         <div *ngIf="password && password.invalid && password.touched" class="text-danger">Password is required</div>
         
-        <button (click)="dologin()" [disabled]="!loginform.valid"  class="btn btn-primary" routerLink="/adminprofile">LOGIN</button> &nbsp;&nbsp; 
+        <button (click)="dologin()" [disabled]="!loginform.valid"  class="btn btn-primary" >LOGIN</button> &nbsp;&nbsp; 
         <p><a routerLink="/Resetpassword">Forgot password?</a></p>
-         
+        
+        
     </div>
 </form>

@@ -41,6 +41,7 @@ import { DeleteQuestionComponent } from './AdminModule/delete-question/delete-qu
 import { DeleteQuestionService } from './Services/deletequestion.service';
 import { Levelexam2Component } from './levelexam2/levelexam2.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { userLogin } from './Services/userLogin.service';
 
 
 
@@ -91,7 +92,7 @@ import { HomepageComponent } from './homepage/homepage.component';
    
     
   ],
-  providers: [Registerservice,ConductExamService,SearchStudentService,AddQuesionService,DeleteQuestionService],
+  providers: [Registerservice,ConductExamService,SearchStudentService,AddQuesionService,DeleteQuestionService,userLogin],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

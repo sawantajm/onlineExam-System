@@ -73,8 +73,7 @@ select * from QuestionDetails
 select * from Filename
 select * from stateN
 select * from district
-
-
+select * from QuestionDetails
 create table district(districtId int primary key,districtName varchar(100),stateId int references stateN(stateId))
 insert into level(Level_id,Level_Name)values(1,'Level_1'),(2,'Level_2'),(3,'Level_3')
 
@@ -82,7 +81,7 @@ insert into Subject(Subject_id,Subject_name)values(1,'java'),(2,'c#.Net'),(3,'C+
 
 select * from Subject
 
-insert into QuestionDetails(Question_id,Question,Option1,Option2,Option3,Option4,Correctanswers,Subject_id,Level_id)
+insert into QuestionDetails(QuestionNumber,Question,Option1,Option2,Option3,Option4,Correctanswers,Subject_id,Level_id)
 values(1,'In which memory a String is stored, when we create a string using new operator?','Stack','String memory','Heap memory',
 'Random storage space','Heap memory',1,1),(2,' What is the use of the intern() method?','It returns the existing string from memory',
 'It creates a new string in the database','It modifies the existing string in the database',
@@ -112,4 +111,17 @@ select * from QuestionDetails
 
 
 create table StudentAnswer(Userid int references Registration(User_id),subjectid int  references Subject(Subject_Id),levelid int references Level(Level_id),
-studentResponse )
+studentResponse varchar(50))
+
+
+insert into StudentAnswer(userid,subjectid,levelid)values(1,1,1)
+
+
+select * from QuestionDetails
+
+
+
+
+select * from Admin_Login
+
+insert into Admin_Login(Email,Password)Values('Admin@gmail.com','Admin@123');

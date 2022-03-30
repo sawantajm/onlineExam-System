@@ -76,7 +76,7 @@ public currentLevel=" ";
 nextQuestion()
 {
   
-  if(this.currentLevel)
+  if(this.currentQuetion<4)
   {
 
     this.currentQuetion++;

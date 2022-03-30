@@ -43,8 +43,10 @@ doclick()
   removequestion(cid:number)
   {
   this.delque.deleteQuestion(cid).subscribe((data)=>{this.msg=data,console.log(this.msg)});
+  
   window.alert("Record deleted!!");
   this.getQuestion()
+  
   }
 
 

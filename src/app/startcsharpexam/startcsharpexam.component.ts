@@ -51,10 +51,29 @@ Answer(qid:any,option:any)
   debugger;
   console.log(qid,option.target.value);
   this.quesans.push(qid,option.target.value);
-  this.examservice.sendAnsdata(this.quesans).subscribe((data:any)=>{this.studentresponse=data;console.log(this.studentresponse)});
+  //this.examservice.sendAnsdata(this.quesans).subscribe((data:any)=>{this.studentresponse=data;console.log(this.studentresponse)});
      
       console.log(this.quesans);
 }
+
+count=0;
+public comans:any=[];
+compareans(option:any)
+{
+  this.examservice. getcsharpQuetion().subscribe((data)=>{this.comans=data;console.log(this.comans)});
+
+debugger;
+ 
+  if(this.comans[this.currentQuetion]?.correctanswers==option.target.value )
+  {
+    this.count++;
+  }
+  else{
+   this.count=this.count;
+  }
+  console.log(this.count);
+}
+
 
 
 

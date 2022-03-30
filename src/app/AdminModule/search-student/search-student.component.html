@@ -28,7 +28,7 @@
 
 <label>Marks:</label>
 <input type="number" placeholder="Marks"/>
-<button type="submit" class="btn btn-success" (click)="  DisplayStudent()">Search Student </button>
+<button type="submit" class="btn btn-success"      (click)="DisplayStudent()">Search Student </button>
 
 <br/>
 <br/>
@@ -49,11 +49,11 @@
         <div *ngFor="let rec of stud">
           <tr>
             
-            <td>{{rec.name}}</td>
-            <td>{{rec.email}}</td>
-            <td>{{rec.mobile_No}}</td>
-            <td>{{rec.city}}</td>
-            <td>{{rec.state}}</td>
+            <td>{{rec.name}}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>{{rec.email}}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>{{rec.mobile_No}}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>{{rec.city}}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>{{rec.state}}</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
             </tr>
         </div>

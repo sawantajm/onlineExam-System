@@ -10,14 +10,16 @@ export class LoginService
     {
 
     }
-    readonly uri = "http://localhost:25711/api/Login";
+    readonly uri = "http://localhost:21332/api/Admin/AdminLogin";
      
   
 
     // checking employee  login  creditals from webapi
     empLogin(emp:any)
     {
-    return  this.http.post(this.uri,emp);
+        debugger;
+    return  this.http.post(this.uri,emp,{responseType :'text'});
+    
     }
 
     //to check user in logged in  or not
@@ -26,7 +28,7 @@ export class LoginService
   loginCheck()
   {
       this.loginuser= sessionStorage.getItem('Email');
-      if(this.loginuser!="")
+      if(this.loginuser!="Email")
       {
           debugger;
           this.loginsessionvariable=true;
