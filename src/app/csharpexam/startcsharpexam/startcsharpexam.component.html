@@ -1,0 +1,27 @@
+
+
+<form>
+    <h2>{{questionlist[currentQuetion]?.level}}</h2>
+<h3></h3>
+<h3>{{questionlist[currentQuetion]?.questionNo}}<span>&nbsp;</span>{{questionlist[currentQuetion]?.question}}</h3>
+
+
+
+<input  type="submit" value="{{questionlist[currentQuetion]?.option1}}" (click)="Answer(questionlist[currentQuetion]?.question,$event)" /><br/><br/>
+                    
+                   
+<input type="submit" value="{{questionlist[currentQuetion]?.option2}}" (click)="Answer(questionlist[currentQuetion]?.question,$event)"/><br/><br/>
+
+
+<input type="submit" value="{{questionlist[currentQuetion]?.option3}}" (click)="Answer(questionlist[currentQuetion]?.question,$event)"/><br/><br/>
+
+
+<input type="submit" value="{{questionlist[currentQuetion]?.option4}}" (click)="Answer(questionlist[currentQuetion]?.question,$event)"/>
+
+<br/>
+
+<br/>
+
+<button class="btn btn-primary"[disabled]="questionlist[currentQuetion]?.questionNo===null"  (click)="nextQuestion()"  >Next</button>&nbsp;&nbsp;
+<button class="btn btn-info" routerLink="/Report">Finish</button>
+</form>

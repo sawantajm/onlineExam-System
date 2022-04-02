@@ -34,8 +34,7 @@ export class ConductExamService{
    readonly url="http://localhost:21332/api/ConductExam";
 
 
-   readonly csharpurl="http://localhost:21332/api/CSharpExam/charp1";
-   readonly charpput="http://localhost:21332/api/CSharpExam";
+  
 
     getQuetion()
     {
@@ -55,23 +54,8 @@ export class ConductExamService{
     
     }
 
-    getcsharpQuetion()
-    {
-
-       
-       return this.http.get(this.csharpurl);
-    }
-
-
-    sendcsharpanswere(response:any)
-    {
-        debugger;
-        return this.http.put(this.charpput,response,{responseType: 'text'});
-    
-    
-    
-    
-    }
+   
+   
 
 
     //for studentresponse

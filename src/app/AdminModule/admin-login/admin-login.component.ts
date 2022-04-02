@@ -38,9 +38,7 @@ export class AdminLoginComponent implements OnInit {
   {
     return this.loginform.get('password');
   }
-  model:any={};
-  errorMessage!: any;
-
+  
 
 
 
@@ -52,7 +50,7 @@ export class AdminLoginComponent implements OnInit {
   dologin()
   {
     //debugger;
-    //console.log(this.emp);
+    
     //Admin
     if(this.loginform.Email=="Admin@gmail.com" &&this.loginform.password=="Admin@123")
     {
@@ -74,6 +72,7 @@ export class AdminLoginComponent implements OnInit {
 
          sessionStorage.setItem('Email',this.loggedinempdetails.Email);
           //to check any user is logged in or not 
+
       this.loginservice.loginCheck();
       debugger;
          if(data!='Invalid')
@@ -84,109 +83,24 @@ export class AdminLoginComponent implements OnInit {
           this.router.navigate(['/adminprofile']);
           
          }
-         
-     /*  else 
-       {
-        console.log(this.loggedinempdetails.text);
-         debugger;
-         this.userrouter.navigate(['/login']);
-         this.err="Invalid Mobile No or Password!!!";
-       }*/
+
 
        }, (error:HttpErrorResponse) => {                              //Error callback
        
         if(error.status===401)
         {
-          window.alert("Invalid Username And Password");
+          this.err="Invalid Email or Password";
+          //window.alert("Invalid Username And Password");
           this.router.navigate(['/admin']);
-          //this.err= error.error.message;
-          //this.err="Invalid Email No or Password!!!";
+         
+          
          
         }
       });
       }
-      else{
-        //this.err="Please enter valid creditianls!!!";
-        window.alert("Please enter valid Credintial");
-      }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-  err:any;
- dologin()
-  {
-
-    console.log(this.loginform.value);
-    
-    
-
-debugger;
-    this.service1.empLogin(this.loginform.value).subscribe(
-      (res)=>{
-        console.log("Success");
-        
-        sessionStorage.setItem('Email',this.loginform.Email)
-        //this.service1.subject.next(true);
-        this.router.navigate(['adminprofile']);
-      },
-      error =>{
-        this.errorMessage = "Login Failed";
-      }
-    );
-
-    
       
   }
-  */
-   /*
-result:any;
-  dologin()
-{
-debugger;
-console.log( this.loginform.value);
-this.service1.empLogin(this.loginform.value).subscribe(
-(data: any) => {
-this.result=data,console.log(this.result)
 
-
-
-debugger;
-if(data !== "Invalid") {
-
-
-
-alert("Welcome Admin");
-this.router.navigate(['adminprofile']);
-
-
-
-}
-else
-{
-alert("check the Credentials");
-}
-}
-);
-
-
-
-}
-*/
 
 }
 

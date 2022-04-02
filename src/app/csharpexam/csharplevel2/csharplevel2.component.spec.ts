@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddExamQuestionComponent } from './add-exam-question.component';
+import { Csharplevel2Component } from './csharplevel2.component';
 
-describe('AddExamQuestionComponent', () => {
-  let component: AddExamQuestionComponent;
-  let fixture: ComponentFixture<AddExamQuestionComponent>;
+describe('Csharplevel2Component', () => {
+  let component: Csharplevel2Component;
+  let fixture: ComponentFixture<Csharplevel2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddExamQuestionComponent ]
+      declarations: [ Csharplevel2Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddExamQuestionComponent);
+    fixture = TestBed.createComponent(Csharplevel2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

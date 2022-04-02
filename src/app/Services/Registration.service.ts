@@ -15,13 +15,13 @@ export class Registerservice
 
     readonly url="http://localhost:21332/api/Registration";
 
-
+/*
 getrecords()
 {
     
     return this.http.get(this.url);
 }
-
+*/
 InsertRecord(reg:any)
 {
     

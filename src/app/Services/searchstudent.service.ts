@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { searchstudent } from "../Model/SearchStudent.model";
 
 
 
@@ -9,6 +10,7 @@ import { Injectable } from "@angular/core";
 
 export class SearchStudentService
 {
+    sstudent?:searchstudent;
     constructor(private http:HttpClient)
     {
 
@@ -20,12 +22,15 @@ export class SearchStudentService
 
    
     
-    searchStudent()
+    searchStudent(sstudent:{})
     {
-
+debugger;
        
-       return this.http.get(this.uri);
-    }
-
+       return this.http.post("http://localhost:21332/api/SearchStudent",sstudent,{responseType:'text'});
+            }
+        getinfo()
+        {
+            return this.http.get(this.uri);
+        }
 
 }

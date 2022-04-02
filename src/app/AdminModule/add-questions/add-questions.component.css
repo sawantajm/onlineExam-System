@@ -1,10 +1,10 @@
-container {
+.container {
     padding: 14px;
     width: 350px;
     margin: auto;
     border: groove;
     width: 700px;
-    height:1100px;
+    height:900px;
     margin: auto;
     padding: 2em
   }
@@ -15,4 +15,12 @@ container {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+  }
+  .main{
+    background-color: aqua;
+    font-weight: bold;
+  }
+  h2{
+    text-align: center;
+    font-weight: bold;
   }

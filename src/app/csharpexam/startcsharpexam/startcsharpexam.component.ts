@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { ConductExamService } from '../Services/conductExam.service';
+import { Router } from '@angular/router';
+import { csharplevelIExamService } from 'src/app/Services/csharplevel1.service';
+import { ConductExamService } from '../../Services/conductExam.service';
 
 @Component({
   selector: 'app-startcsharpexam',
@@ -9,7 +11,7 @@ import { ConductExamService } from '../Services/conductExam.service';
 })
 export class StartcsharpexamComponent implements OnInit {
 
-  constructor(private fb:FormBuilder,private examservice:ConductExamService) {
+  constructor(private fb:FormBuilder,private examservice:csharplevelIExamService,private router:Router) {
    
 
 
@@ -44,18 +46,19 @@ export class StartcsharpexamComponent implements OnInit {
 
 
 //add que and ans
-quesans=[{question:"",ans:" "}];
+quesans:any=[];
 studentresponse:any
 Answer(qid:any,option:any)
 {
   debugger;
   console.log(qid,option.target.value);
   this.quesans.push(qid,option.target.value);
-  //this.examservice.sendAnsdata(this.quesans).subscribe((data:any)=>{this.studentresponse=data;console.log(this.studentresponse)});
+
+
      
       console.log(this.quesans);
 }
-
+/*
 count=0;
 public comans:any=[];
 compareans(option:any)
@@ -63,8 +66,9 @@ compareans(option:any)
   this.examservice. getcsharpQuetion().subscribe((data)=>{this.comans=data;console.log(this.comans)});
 
 debugger;
+console.log(this.comans);
  
-  if(this.comans[this.currentQuetion]?.correctanswers==option.target.value )
+  if(this.comans.correctanswers==option.target.value )
   {
     this.count++;
   }
@@ -72,7 +76,7 @@ debugger;
    this.count=this.count;
   }
   console.log(this.count);
-}
+}*/
 
 
 
@@ -91,7 +95,7 @@ debugger;
   
  
 
-  this.examservice. getcsharpQuetion().subscribe((data)=>{this.questionlist=data;console.log(this.questionlist)});
+  this.examservice.getcsharpQuetion().subscribe((data)=>{this.questionlist=data;console.log(this.questionlist)});
    
  }
 
@@ -105,7 +109,11 @@ nextQuestion()
     debugger;
     this.currentQuetion++}
   else{
-    this.message="Successfully Completed"
+debugger;
+    this.examservice.sendAnsdata(this.quesans).subscribe((data:any)=>{this.studentresponse=data;console.log(this.studentresponse)});
+    window.alert(" Level One Successfully Completed");
+    this.router.navigate(["/csharplevel2"]);
+   
   }
  
    

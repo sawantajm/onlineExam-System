@@ -1,5 +1,4 @@
 
-
 <form>
     <h2>{{questionlist[currentQuetion]?.level}}</h2>
 <h3></h3>
@@ -22,6 +21,6 @@
 <div class="checkd" name="option" > </div>
 <br/>
 
-<button class="btn btn-primary"[disabled]="questionlist[currentQuetion]?.questionNo===null"  (click)="nextQuestion()"  >Next</button>&nbsp;&nbsp;
+<button class="btn btn-primary"[disabled]="questionlist[currentQuetion]?.question===null"  (click)="nextQuestion()"  >Next</button>&nbsp;&nbsp;
 <button class="btn btn-info" routerLink="/Report">Finish</button>
 </form>

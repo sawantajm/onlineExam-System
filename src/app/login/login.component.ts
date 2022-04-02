@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder,private regservice:Registerservice ,private loginservice:userLogin, private router:Router) { }
 
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+   
     console.log(" login page call");
   }
 
@@ -49,7 +50,7 @@ debugger;
             else{
               this.isuservalid=true;
               window.alert("Login Successfull");
-              this.router.navigate(['/exam']);
+              this.router.navigate(['/userhome']);
             }
   
   });

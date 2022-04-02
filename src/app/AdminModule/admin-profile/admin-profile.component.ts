@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-profile',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  public loginuservariable?:boolean;
+   public dologoff()
+    {
+        debugger;
+        sessionStorage.clear();
+        this.loginuservariable=false;
+        window.alert("Logout Succefully");
+       this.router.navigate(['/home']);
+    }
 }

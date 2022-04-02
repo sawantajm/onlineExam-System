@@ -25,3 +25,6 @@ div {
   a{
     float:none;
   }
+  .top{
+    float: right;
+  }

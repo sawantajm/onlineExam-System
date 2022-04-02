@@ -1,33 +1,29 @@
 
-<form #searchstudent>
+<form [formGroup]="searchstudent">
 
 <label>Technology:</label>
-<select><option>Select</option>
-    <option value="Java">Java</option>
-    <option value="c#">.NET</option>
+<select formControlName="SubjectName"><option>Select</option>
+    <option value="java">Java</option>
+    <option value="c#.Net">.NET</option>
     <option value="sql">Sql</option>
 </select>
 
-<label>State:</label>
-<select><option>Select</option>
-    <option value="Maharashtra">Maharashtra</option>
-    <option value="c#">.NET</option>
-    <option value="sql">Sql</option>
-</select>
+<label>State</label>
+<input type="text" placeholder="State" formControlName="State"/>
 
 <label>City:</label>
-<input type="text"  />
+<input type="text"   placeholder="City"  formControlName="City" />
 
 
 <label>Level:</label>
-<select><option>Select</option>
-    <option value="level1">Level1</option>
-    <option value="Level2">Level2</option>
-    <option value="Level3">Level3</option>
+<select  formControlName="LevelName"><option>Select</option>
+    <option value="Level_1">Level1</option>
+    <option value="Level_2">Level2</option>
+    <option value="Level_3">Level3</option>
 </select>
 
 <label>Marks:</label>
-<input type="number" placeholder="Marks"/>
+<input type="number" placeholder="Marks" formControlName="MarksObtained"/>
 <button type="submit" class="btn btn-success"      (click)="DisplayStudent()">Search Student </button>
 
 <br/>

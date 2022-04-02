@@ -20,7 +20,7 @@ export class ExamRegistrationComponent implements OnInit {
   registertable:Registration={};
 
   ngOnInit(): void {
-   this.getRecord()
+   //this.getRecord()
   }
 
 
@@ -145,13 +145,19 @@ export class ExamRegistrationComponent implements OnInit {
 
 
 
-
+/*
 
   recordinfo:any=[];
   getRecord()
   {
   this.register.getrecords().subscribe((data)=>{this.recordinfo=data; console.table(this.recordinfo)});
   }
+*/
+
+
+
+
+  //insert record in database
 result:any;
 setRecord()
 {
@@ -160,6 +166,8 @@ setRecord()
 
   this.register.InsertRecord(this.registrationform.value).subscribe((data)=>{this.result=data,console.log(this. result)});
 
+  window.alert("Registred Succefully");
+
 }
 
 
@@ -167,7 +175,7 @@ doregister()
 {
   
  console.log(this.registertable.fullname);
-window.alert("Registred Succesfully");
+
 
  
  

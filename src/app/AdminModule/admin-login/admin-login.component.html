@@ -2,8 +2,9 @@
 <form [formGroup] ="loginform">
     <div class="container">
         <h3>Admin Login</h3>
+       <span class="text-danger"> {{err}}</span><br/>
         <label>Email Id:</label>&nbsp;&nbsp;
-        <input type="text" placeholder="User Name" formControlName="Email"/><br>
+        <input type="text" placeholder="Email" formControlName="Email"/><br>
         <div *ngIf="Email && Email.invalid && Email.touched" class="text-danger">Email is required</div>
         
         <label>Password:</label>&nbsp;&nbsp;

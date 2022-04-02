@@ -1,13 +1,23 @@
 
 
 
-       
-        <a routerLink="/home">Logout</a>
-    
+       <div class="btnright">
+        <button  class="btn btn-danger" (click)="dologoff()">Logout</button>
+        </div>
+        
 <div class="container">
-    <button class="btn btn-primary" routerLink="/Addquestion" type="submit">Add Questions</button><br/>
+   
+    <button  class="btn btn-primary" routerLink="/Addquestion" type="submit">Add Questions</button><br/>
+  
+
     <button  class="btn btn-primary" routerLink="/deletequetion" type="submit">Remove Questions</button><br/>
+    
+    
+    
     <button  class="btn btn-primary" routerLink="/searchstudent" type="submit">View Reports</button>
+
+    
+
 </div>
     <form class="navbar-form navbar-left" action="action_page.php">
     </form>

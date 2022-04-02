@@ -13,10 +13,10 @@ export class ViewReportComponent implements OnInit {
   ngOnInit(): void {
   }
   stud:any;
-  DisplayStudent()
+ /* DisplayStudent()
   {
     this.searchsudent.searchStudent().subscribe((data)=>{this.stud=data;console.table(this.stud)});
   }
   
-  
+  */
 }

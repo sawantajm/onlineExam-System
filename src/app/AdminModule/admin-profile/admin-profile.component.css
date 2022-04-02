@@ -5,7 +5,7 @@
     border: groove;
     width: 400px;
     height: 250px;
-    margin: auto;
+   margin-top: 10%;
     text-align: center;
     
   }
@@ -14,10 +14,17 @@
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+   
     box-sizing: border-box;
   }
   a{
     float: right;
     margin-right: 30px;
+  }
+  .btnright{
+    float: right;
+    padding:30px;
+    margin-left: 10%;
+    margin: auto;
+    width:15%;
   }
